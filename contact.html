@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | T-Coude</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- T-Coude Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg tc-navbar">
+      <div class="container">
+
+        <a class="navbar-brand tc-logo" href="index.html">
+          <img src="images/tcoude-logo.png" alt="T-Coude colored logo">
+        </a>
+
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavigation"
+          aria-controls="mainNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#products">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- CONTACT HERO -->
+    <section class="contact-hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+
+          <div class="col-lg-7">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h1>We'd Love to Hear From You!</h1>
+
+            <p>
+              Have a question about our shirts or need help with an order?
+              Send us a message. We're happy to help.
+            </p>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="photo-placeholder" role="img"
+              aria-label="Placeholder for T-Coude toucan photo">
+              Toucan Photo Placeholder
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT INFORMATION AND FORM -->
+    <section class="contact-content">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- CONTACT INFORMATION -->
+          <div class="col-lg-6">
+            <h2>Contact Information</h2>
+
+            <div class="contact-info-item">
+              <span class="contact-icon" aria-hidden="true">✉</span>
+              <div>
+                <h3>Email Us</h3>
+                <p>t-coudeshirts@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <span class="contact-icon" aria-hidden="true">♪</span>
+              <div>
+                <h3>Follow T-Coude</h3>
+                <p>@t_coudeph</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <span class="contact-icon" aria-hidden="true">🛒</span>
+              <div>
+                <h3>Order Inquiries</h3>
+                <p>
+                  Have questions about your order?<br>
+                  Send us a message!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTACT FORM -->
+          <div class="col-lg-6">
+            <h2>What's Your Concern?</h2>
+
+            <form id="contactForm" class="contact-form">
+
+              <div class="mb-3">
+                <label for="name" class="form-label">
+                  Name: <span class="required">(required)</span>
+                </label>
+
+                <input type="text" class="form-control"
+                  id="name" name="name"
+                  placeholder="Full Name" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">
+                  Email Address: <span class="required">(required)</span>
+                </label>
+
+                <input type="email" class="form-control"
+                  id="email" name="email"
+                  placeholder="name@example.com" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="subject" class="form-label">
+                  Subject: <span class="required">(required)</span>
+                </label>
+
+                <select class="form-select" id="subject"
+                  name="subject" required>
+                  <option value="" selected disabled>Choose a subject</option>
+                  <option value="Product Question">Product Question</option>
+                  <option value="Order Inquiry">Order Inquiry</option>
+                  <option value="Shipping Concern">Shipping Concern</option>
+                  <option value="Other Concern">Other Concern</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">
+                  Message: <span class="required">(required)</span>
+                </label>
+
+                <textarea class="form-control" id="message"
+                  name="message" rows="4"
+                  placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-cadet">Submit</button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="tc-footer">
+    <div class="container">
+      <div class="row align-items-center text-center g-3">
+
+        <div class="col-md-3">
+          <a class="footer-logo" href="index.html" aria-label="T-Coude homepage">
+            <img src="images/tcoude-footer-logo.png" alt="T-Coude toucan logo">
+          </a>
+        </div>
+
+        <div class="col-md-6 footer-middle">
+          <a href="privacy.html">Privacy Policy</a>
+          <p>© 2026 T-Coude. All Rights Reserved.</p>
+        </div>
+
+        <div class="col-md-3 footer-socials">
+          <a href="#" aria-label="Facebook">
+            <img src="images/facebook.png" alt="">
+          </a>
+
+          <a href="#" aria-label="TikTok">
+            <img src="images/tiktok.png" alt="">
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <img src="images/instagram.png" alt="">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
