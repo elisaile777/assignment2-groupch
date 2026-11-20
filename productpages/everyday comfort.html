@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EVERYDAY COMFORT | T-cOUde</title>
+  <meta name="description" content="Made for the everyday. Everyday Comfort keeps things easy, relaxed, and ready for wherever the day takes you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,400;10..100,500;10..100,600;10..100,700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/product.css">
+  <script src="js/order.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="T-cOUde home">
+      <img src="images/tcoude-logo.png" alt="T-cOUde logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="product-everyday-comfort.html">Shop</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main class="product-page" data-product="EVERYDAY COMFORT" data-price="₱499.00">
+    <section class="product-gallery" aria-label="Product images">
+      <button class="gallery-arrow previous" type="button" aria-label="Show front image">‹</button>
+      <img class="product-image" src="images/everyday-comfort-front.png" data-front="images/everyday-comfort-front.png" data-back="images/everyday-comfort-back.png" alt="Everyday Comfort shirt - front view">
+      <button class="gallery-arrow next" type="button" aria-label="Show back image">›</button>
+      <p class="image-hint">FRONT / BACK</p>
+    </section>
+
+    <section class="product-details">
+      <h1>EVERYDAY COMFORT</h1>
+      <p class="price">₱499.00</p>
+      <p class="description">A plain comfortable tee designed for everyday wear.</p>
+
+      <div class="product-divider"></div>
+
+      <div class="option-group">
+        <h2>Pick Your Size</h2>
+        <div class="size-options" role="group" aria-label="Choose a shirt size">
+          <button class="size-button" type="button" data-size="XS" aria-pressed="false">XS</button>
+          <button class="size-button" type="button" data-size="S" aria-pressed="false">S</button>
+          <button class="size-button" type="button" data-size="M" aria-pressed="false">M</button>
+          <button class="size-button" type="button" data-size="L" aria-pressed="false">L</button>
+          <button class="size-button" type="button" data-size="XL" aria-pressed="false">XL</button>
+        </div>
+      </div>
+
+      <div class="option-group quantity-group">
+        <h2>Quantity</h2>
+        <div class="quantity-control">
+          <button type="button" class="quantity-minus" aria-label="Decrease quantity">−</button>
+          <output class="quantity-value" aria-live="polite">1</output>
+          <button type="button" class="quantity-plus" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+
+      <button class="order-button" type="button">ORDER NOW</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="index.html" aria-label="T-cOUde home">
+        <img src="images/tcoude-footer-logo.png" alt="T-cOUde">
+      </a>
+      <div class="footer-center">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <p>© 2026 T-cOUde. All rights reserved.</p>
+      </div>
+      <div class="social-links" aria-label="Social media">
+        <a href="#" aria-label="Facebook"><img src="images/facebook.png" alt=""></a>
+        <a href="#" aria-label="Instagram"><img src="images/instagram.png" alt=""></a>
+        <a href="#" aria-label="TikTok"><img src="images/tiktok.png" alt=""></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
