@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everyday Comfort Tee | T-Coude</title>
+  <meta name="description" content="A comfortable T-shirt designed for everyday wear.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/product.css">
+  <script src="js/order.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg tc-navbar">
+    <div class="container">
+      <a class="navbar-brand tc-logo" href="index.html">
+        <img src="images/tcoude-logo.png" alt="T-Coude logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNavigation" aria-controls="mainNavigation"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html#products">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="product-page" data-product="Everyday Comfort Tee" data-price="499">
+  <section class="product-gallery" aria-label="Product images">
+    <button class="gallery-arrow previous" type="button" aria-label="Show front image">‹</button>
+
+    <img class="product-image"
+      src="images/everyday-comfort-front.png"
+      data-front="images/everyday-comfort-front.png"
+      data-back="images/everyday-comfort-back.png"
+      alt="Everyday Comfort T-shirt front view">
+
+    <button class="gallery-arrow next" type="button" aria-label="Show back image">›</button>
+    <p class="image-hint">FRONT / BACK</p>
+  </section>
+
+  <section class="product-details">
+    <h1>Everyday Comfort Tee</h1>
+    <p class="price">₱499</p>
+    <p class="description">A plain, comfortable tee designed for everyday wear.</p>
+
+    <div class="product-divider"></div>
+
+    <div class="option-group">
+      <h2>Pick Your Size</h2>
+      <div class="size-options" role="group" aria-label="Choose a shirt size">
+        <button class="size-button" type="button" data-size="XS" aria-pressed="false">XS</button>
+        <button class="size-button" type="button" data-size="S" aria-pressed="false">S</button>
+        <button class="size-button" type="button" data-size="M" aria-pressed="false">M</button>
+        <button class="size-button" type="button" data-size="L" aria-pressed="false">L</button>
+        <button class="size-button" type="button" data-size="XL" aria-pressed="false">XL</button>
+      </div>
+    </div>
+
+    <div class="option-group quantity-group">
+      <h2>Quantity</h2>
+      <div class="quantity-control">
+        <button type="button" class="quantity-minus" aria-label="Decrease quantity">−</button>
+        <output class="quantity-value" aria-live="polite">1</output>
+        <button type="button" class="quantity-plus" aria-label="Increase quantity">+</button>
+      </div>
+    </div>
+
+    <button class="order-button" type="button">ORDER NOW</button>
+    <p class="order-message" aria-live="polite"></p>
+  </section>
+</main>
+
+<footer class="tc-footer">
+  <div class="container">
+    <div class="row align-items-center text-center g-3">
+      <div class="col-md-3">
+        <a class="footer-logo" href="index.html" aria-label="T-Coude homepage">
+          <img src="images/tcoude-footer-logo.png" alt="T-Coude logo">
+        </a>
+      </div>
+      <div class="col-md-6 footer-middle">
+        <a href="privacy.html">Privacy Policy</a>
+        <p>© 2026 T-Coude. All Rights Reserved.</p>
+      </div>
+      <div class="col-md-3 footer-socials">
+        <a href="#" aria-label="Facebook"><img src="images/facebook.png" alt=""></a>
+        <a href="#" aria-label="TikTok"><img src="images/tiktok.png" alt=""></a>
+        <a href="#" aria-label="Instagram"><img src="images/instagram.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
