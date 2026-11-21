@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Please let me know the next steps. Thank you!";
 
       const mailto =
-        "mailto:hello@examplewebsite142.com" +
+        "mailto:orders@examplewebsite142.com" +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
 
