@@ -1,104 +1,94 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const productPage = document.querySelector(".product-page");
+  // FRONT AND BACK PRODUCT IMAGE SWITCHER
+  const productImage = document.getElementById("productGalleryImage");
+  const previousButton = document.getElementById("previousImage");
+  const nextButton = document.getElementById("nextImage");
 
-  if (!productPage) return;
+  if (productImage && previousButton && nextButton) {
+    const frontImage = productImage.dataset.front;
+    const backImage = productImage.dataset.back;
 
-  // PRODUCT IMAGE GALLERY
-  const productImage = document.querySelector(".product-image");
-  const previousButton = document.querySelector(".gallery-arrow.previous");
-  const nextButton = document.querySelector(".gallery-arrow.next");
+    let showingBack = false;
 
-  const frontImage = productImage.dataset.front;
-  const backImage = productImage.dataset.back;
+    function showProductImage() {
+      productImage.src = showingBack ? backImage : frontImage;
+      productImage.alt = showingBack
+        ? "T-shirt back view"
+        : "T-shirt front view";
+    }
 
-  let showingFront = true;
+    previousButton.addEventListener("click", function () {
+      showingBack = !showingBack;
+      showProductImage();
+    });
 
-  function changeImage() {
-    showingFront = !showingFront;
-
-    productImage.src = showingFront ? frontImage : backImage;
-
-    productImage.alt = showingFront
-      ? "Product front view"
-      : "Product back view";
+    nextButton.addEventListener("click", function () {
+      showingBack = !showingBack;
+      showProductImage();
+    });
   }
 
-  previousButton.addEventListener("click", changeImage);
-  nextButton.addEventListener("click", changeImage);
+  // QUANTITY BUTTONS
+  document.querySelectorAll(".quantity-control").forEach(function (control) {
+    const input = control.querySelector('input[name="quantity"]');
+    const minus = control.querySelector(".quantity-minus");
+    const plus = control.querySelector(".quantity-plus");
 
-  // SIZE SELECTION
-  const sizeButtons = document.querySelectorAll(".size-button");
-  let selectedSize = "";
+    if (!input || !minus || !plus) return;
 
-  sizeButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
+    minus.addEventListener("click", function () {
+      const current = Number(input.value) || 1;
+      input.value = Math.max(1, current - 1);
+    });
 
-      sizeButtons.forEach(function (item) {
-        item.classList.remove("selected");
-        item.setAttribute("aria-pressed", "false");
-      });
+    plus.addEventListener("click", function () {
+      const current = Number(input.value) || 1;
+      input.value = Math.min(99, current + 1);
+    });
 
-      button.classList.add("selected");
-      button.setAttribute("aria-pressed", "true");
-
-      selectedSize = button.dataset.size;
+    input.addEventListener("change", function () {
+      const current = Number(input.value) || 1;
+      input.value = Math.min(99, Math.max(1, current));
     });
   });
 
-  // QUANTITY CONTROL
-  const quantityDisplay = document.querySelector(".quantity-value");
-  const minusButton = document.querySelector(".quantity-minus");
-  const plusButton = document.querySelector(".quantity-plus");
+  // ORDER FORM - OPENS THE VISITOR'S EMAIL APP
+  document.querySelectorAll(".order-form").forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-  let quantity = 1;
+      const selectedSize = form.querySelector('input[name="size"]:checked');
+      const quantity = form.querySelector('input[name="quantity"]');
+      const productName = form.dataset.product;
 
-  minusButton.addEventListener("click", function () {
-    if (quantity > 1) {
-      quantity--;
-      quantityDisplay.textContent = quantity;
-    }
-  });
+      if (!selectedSize) {
+        alert("Please choose your T-shirt size first.");
+        return;
+      }
 
-  plusButton.addEventListener("click", function () {
-    quantity++;
-    quantityDisplay.textContent = quantity;
-  });
+      const quantityValue = Math.max(1, Number(quantity.value) || 1);
 
-  // ORDER BUTTON
-  const orderButton = document.querySelector(".order-button");
-  const orderMessage = document.querySelector(".order-message");
+      const subject = "T-Coude Order Inquiry - " + productName;
 
-  orderButton.addEventListener("click", function () {
+      const body =
+        "Hello T-Coude!\n\n" +
+        "I would like to order the following:\n\n" +
+        "Product: " + productName + "\n" +
+        "Size: " + selectedSize.value + "\n" +
+        "Quantity: " + quantityValue + "\n" +
+        "Price per shirt: PHP 499\n" +
+        "Estimated total: PHP " + (499 * quantityValue) + "\n\n" +
+        "Please let me know the next steps. Thank you!";
 
-    if (!selectedSize) {
-      orderMessage.textContent = "Please select your shirt size first.";
-      return;
-    }
+      const mailto =
+        "mailto:hello@examplewebsite142.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
 
-    const productName = productPage.dataset.product;
-    const price = Number(productPage.dataset.price);
-    const total = price * quantity;
-
-    const subject = "Order Inquiry - " + productName;
-
-    const body =
-      "Hello T-Coude!\n\n" +
-      "I would like to order the following:\n\n" +
-      "Product: " + productName + "\n" +
-      "Size: " + selectedSize + "\n" +
-      "Quantity: " + quantity + "\n" +
-      "Price per shirt: PHP " + price.toFixed(2) + "\n" +
-      "Total: PHP " + total.toFixed(2) + "\n\n" +
-      "Please let me know the next steps. Thank you!";
-
-    const emailLink =
-      "mailto:hello@examplewebsite142.com" +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
-
-    window.location.href = emailLink;
+      window.location.href = mailto;
+    });
   });
 
 });

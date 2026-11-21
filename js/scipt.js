@@ -1,46 +1,36 @@
 
-=====================================
-   T-COUDE CONTACT FORM
-   JavaScript Email Method #2
-=====================================
-
 document.addEventListener("DOMContentLoaded", function () {
-
   const contactForm = document.getElementById("contactForm");
 
-  if (contactForm) {
+  if (!contactForm) return;
 
-    contactForm.addEventListener("submit", function (event) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-      // Prevent the page from refreshing
-      event.preventDefault();
+    const name = document.getElementById("contactName").value.trim();
+    const email = document.getElementById("contactEmail").value.trim();
+    const subject = document.getElementById("contactSubject").value;
+    const message = document.getElementById("contactMessage").value.trim();
 
-      // Get the visitor's information
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const subject = document.getElementById("subject").value;
-      const message = document.getElementById("message").value.trim();
+    if (!name || !email || !subject || !message) {
+      alert("Please complete all required fields.");
+      return;
+    }
 
-      // Prepare the email subject and body
-      const emailSubject = encodeURIComponent(subject);
+    const emailSubject = "T-Coude Contact: " + subject;
 
-      const emailBody = encodeURIComponent(
-        "Name: " + name +
-        "\nEmail: " + email +
-        "\n\nMessage:\n" + message
-      );
+    const emailBody =
+      "Hello T-Coude!\n\n" +
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n" +
+      "Subject: " + subject + "\n\n" +
+      "Message:\n" + message;
 
-      // Create the email link
-      const emailLink =
-        "mailto:hello@examplewebsite142.com" +
-        "?subject=" + emailSubject +
-        "&body=" + emailBody;
+    const mailtoLink =
+      "mailto:hello@examplewebsite142.com" +
+      "?subject=" + encodeURIComponent(emailSubject) +
+      "&body=" + encodeURIComponent(emailBody);
 
-      // Open the visitor's email application
-      window.location.href = emailLink;
-
-    });
-
-  }
-
+    window.location.href = mailtoLink;
+  });
 });
