@@ -17,7 +17,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 85px;
+  scroll-padding-top: 95px;
 }
 
 body {
@@ -28,6 +28,7 @@ body {
   color: #111111;
   background-color: var(--cream);
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
 }
 
 main {
@@ -47,8 +48,8 @@ p, a, button, input, textarea, select, label {
 ===================================== */
 
 .tc-navbar {
-  min-height: 78px;
-  padding: 8px 0;
+  min-height: 90px;
+  padding: 10px 0;
   background-color: var(--cream);
   border-bottom: 3px solid #E4D6B6;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -56,18 +57,18 @@ p, a, button, input, textarea, select, label {
 
 .tc-logo img {
   display: block;
-  width: 165px;
-  height: 65px;
+  width: 190px;
+  height: 75px;
   object-fit: contain;
 }
 
 .tc-navbar .nav-link {
-  margin-left: 9px;
-  padding: 8px 14px;
+  margin-left: 12px;
+  padding: 9px 18px;
   color: #111111;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
-  border-radius: 22px;
+  border-radius: 25px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -82,7 +83,7 @@ p, a, button, input, textarea, select, label {
 ===================================== */
 
 .tc-footer {
-  padding: 15px 0;
+  padding: 22px 0;
   color: var(--white);
   background-color: var(--bistre);
   border-top: 4px solid var(--leather);
@@ -90,15 +91,15 @@ p, a, button, input, textarea, select, label {
 
 .footer-logo img {
   display: block;
-  width: 88px;
-  height: 78px;
+  width: 105px;
+  height: 92px;
   margin: auto;
   object-fit: contain;
 }
 
 .footer-middle a {
   color: var(--white);
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -109,29 +110,32 @@ p, a, button, input, textarea, select, label {
 }
 
 .footer-middle p {
-  margin: 8px 0 0;
-  font-size: 13px;
+  margin: 10px 0 0;
+  font-size: 15px;
 }
 
 .footer-socials {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
 }
 
 .footer-socials a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .footer-socials img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* =====================================
@@ -139,35 +143,35 @@ p, a, button, input, textarea, select, label {
 ===================================== */
 
 .hero-section {
-  padding: 28px 15px 24px;
+  padding: 55px 15px 50px;
   background-color: var(--cream);
   border-bottom: 3px solid var(--leather);
 }
 
 .hero-section h1 {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   color: #080808;
-  font-size: clamp(38px, 4.5vw, 52px);
+  font-size: clamp(46px, 5.2vw, 64px);
   font-weight: 600;
   line-height: 1.1;
 }
 
 .hero-section p {
-  margin-bottom: 13px;
-  font-size: 16px;
+  margin-bottom: 22px;
+  font-size: 19px;
   font-style: italic;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 .shop-button,
 .btn-cadet {
-  padding: 7px 26px;
+  padding: 10px 34px;
   color: #111111;
   background-color: var(--cadet-blue);
   border: 2px solid var(--bistre);
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -185,7 +189,7 @@ p, a, button, input, textarea, select, label {
 ===================================== */
 
 .products-section {
-  padding: 18px 0 17px;
+  padding: 40px 0 38px;
   background-color: var(--ebony-clay);
   border-bottom: 3px solid var(--leather);
 }
@@ -199,17 +203,17 @@ p, a, button, input, textarea, select, label {
 }
 
 .product-card h2 {
-  min-height: 30px;
-  margin-bottom: 8px;
+  min-height: 36px;
+  margin-bottom: 14px;
   color: var(--cream);
-  font-size: 25px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.1;
 }
 
 .product-card h2 span {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   font-style: italic;
   font-weight: 400;
 }
@@ -217,21 +221,21 @@ p, a, button, input, textarea, select, label {
 .product-image {
   display: block;
   width: 100%;
-  max-width: 230px;
-  height: 145px;
+  max-width: 280px;
+  height: 210px;
   margin: 0 auto;
   object-fit: contain;
 }
 
 .view-button {
-  min-width: 82px;
-  margin-top: 8px;
-  padding: 4px 17px;
+  min-width: 110px;
+  margin-top: 16px;
+  padding: 6px 26px;
   color: #111111;
   background-color: var(--white);
   border: 2px solid var(--leather);
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
@@ -249,23 +253,23 @@ p, a, button, input, textarea, select, label {
 ===================================== */
 
 .about-section {
-  padding: 14px 15px 16px;
+  padding: 36px 15px 40px;
   background-color: var(--cream);
   border-bottom: 3px solid var(--leather);
 }
 
 .about-section h2 {
-  margin-bottom: 3px;
+  margin-bottom: 10px;
   color: #080808;
-  font-size: 34px;
+  font-size: 42px;
   font-weight: 700;
 }
 
 .about-section p {
   margin: 0;
-  font-size: 14px;
+  font-size: 17px;
   font-style: italic;
-  line-height: 1.45;
+  line-height: 1.55;
 }
 
 /* =====================================
@@ -274,7 +278,7 @@ p, a, button, input, textarea, select, label {
 
 .contact-hero,
 .privacy-hero {
-  padding: 30px 0;
+  padding: 48px 0;
   color: var(--white);
   background-color: var(--ebony-clay);
   border-bottom: 3px solid var(--leather);
@@ -282,21 +286,23 @@ p, a, button, input, textarea, select, label {
 
 .contact-hero h1,
 .privacy-hero h1 {
-  margin-bottom: 5px;
-  font-size: clamp(38px, 4vw, 48px);
+  margin-bottom: 8px;
+  font-size: clamp(44px, 4.8vw, 58px);
   font-weight: 600;
+  line-height: 1.08;
 }
 
 .contact-hero p {
   margin-bottom: 0;
-  font-size: 15px;
+  font-size: 17px;
   font-style: italic;
+  line-height: 1.5;
 }
 
 .eyebrow {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   color: var(--cadet-blue);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 2px;
 }
@@ -304,8 +310,8 @@ p, a, button, input, textarea, select, label {
 .contact-toucan-image {
   display: block;
   width: 100%;
-  max-width: 300px;
-  height: 145px;
+  max-width: 340px;
+  height: 190px;
   margin-left: auto;
   object-fit: cover;
   border: 3px solid var(--leather);
@@ -316,22 +322,22 @@ p, a, button, input, textarea, select, label {
 ===================================== */
 
 .contact-content {
-  padding: 35px 0;
+  padding: 55px 0 65px;
   background-color: var(--cream);
 }
 
 .contact-content h2 {
-  margin-bottom: 20px;
+  margin-bottom: 26px;
   color: var(--ebony-clay);
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 600;
 }
 
 .contact-info-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 22px;
+  gap: 18px;
+  margin-bottom: 28px;
 }
 
 .contact-icon {
@@ -339,8 +345,8 @@ p, a, button, input, textarea, select, label {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   overflow: hidden;
   background-color: var(--ebony-clay);
   border-radius: 50%;
@@ -349,22 +355,23 @@ p, a, button, input, textarea, select, label {
 .contact-icon img,
 .contact-icon-img {
   display: block;
-  width: 29px;
-  height: 29px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
 }
 
 .contact-info-item h3 {
-  margin: 0;
+  margin: 0 0 2px;
   color: var(--leather);
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 19px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 .contact-info-item p {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.45;
 }
 
 .contact-info-item a {
@@ -382,15 +389,17 @@ p, a, button, input, textarea, select, label {
 }
 
 .contact-form .form-label {
-  margin-bottom: 4px;
-  font-size: 14px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .contact-form .form-control,
 .contact-form .form-select {
-  border: 1px solid var(--leather);
+  padding: 10px 16px;
+  border: 1.5px solid var(--leather);
   border-radius: 18px;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .contact-form textarea {
@@ -406,62 +415,62 @@ p, a, button, input, textarea, select, label {
 }
 
 .privacy-hero p {
-  margin-bottom: 8px;
-  font-size: 15px;
+  margin-bottom: 10px;
+  font-size: 17px;
   font-style: italic;
 }
 
 .privacy-hero small {
   color: var(--cadet-blue);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .privacy-content {
-  padding: 35px 0 25px;
+  padding: 55px 0 40px;
   background-color: var(--cream);
 }
 
 .privacy-item {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
+  gap: 20px;
   height: 100%;
 }
 
 .privacy-icon-img {
   display: block;
   flex-shrink: 0;
-  width: 55px;
-  height: 55px;
+  width: 68px;
+  height: 68px;
   object-fit: contain;
 }
 
 .privacy-item h2 {
-  margin-bottom: 3px;
+  margin-bottom: 6px;
   color: var(--leather);
-  font-size: 27px;
+  font-size: 32px;
   font-weight: 600;
 }
 
 .privacy-item p {
   margin-bottom: 0;
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .privacy-questions {
-  padding: 20px 15px;
+  padding: 30px 15px 50px;
   text-align: center;
 }
 
 .privacy-questions h2 {
   color: var(--ebony-clay);
   font-family: 'Imbue', serif;
-  font-size: 29px;
+  font-size: 36px;
 }
 
 .privacy-questions p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /* =====================================
@@ -484,45 +493,54 @@ select:focus-visible {
 @media (max-width: 767px) {
 
   .tc-navbar {
-    min-height: 68px;
+    min-height: 74px;
   }
 
   .tc-navbar .nav-link {
-    margin: 3px 0;
+    margin: 4px 0;
+    font-size: 16px;
   }
 
   .tc-logo img {
-    width: 130px;
-    height: 55px;
+    width: 145px;
+    height: 60px;
   }
 
   .hero-section {
-    padding: 32px 15px;
+    padding: 38px 15px;
   }
 
   .hero-section h1 {
-    font-size: 36px;
+    font-size: 40px;
   }
 
   .hero-section p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .products-section {
-    padding: 25px 0;
+    padding: 32px 0;
   }
 
   .product-card h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .product-image {
-    max-width: 240px;
-    height: 170px;
+    max-width: 260px;
+    height: 190px;
   }
 
   .about-section {
-    padding: 22px 15px;
+    padding: 28px 15px;
+  }
+
+  .about-section h2 {
+    font-size: 36px;
+  }
+
+  .about-section p {
+    font-size: 15px;
   }
 
   .about-section p br,
@@ -532,43 +550,49 @@ select:focus-visible {
 
   .contact-hero,
   .privacy-hero {
+    padding: 36px 15px;
     text-align: center;
   }
 
   .contact-toucan-image {
-    height: 150px;
-    margin: 20px auto 0;
+    height: 170px;
+    margin: 22px auto 0;
   }
 
   .contact-content,
   .privacy-content {
-    padding: 25px 15px;
+    padding: 35px 15px;
   }
 
   .contact-content h2 {
-    font-size: 29px;
+    font-size: 34px;
   }
 
   .privacy-item {
-    gap: 13px;
-    margin-bottom: 24px;
+    gap: 15px;
+    margin-bottom: 26px;
   }
 
   .privacy-icon-img {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
   }
 
   .privacy-item h2 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .footer-logo img {
-    width: 75px;
-    height: 65px;
+    width: 85px;
+    height: 75px;
   }
 
   .footer-socials {
-    padding-top: 8px;
+    padding-top: 10px;
+  }
+
+  .footer-socials a {
+    width: 44px;
+    height: 44px;
   }
 }
